@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Desestruturação</title>
+</head>
+<body>
+  <div id="output"></div>
+
+  <script>
+    /* 08-desestruturação
+    Extrair dados facilmente de um array ou objeto e armazená-los em variáveis e constantes */
+
+    // Usando desestruturação com array
+    const [a, b] = ['Lucas', 'Vivian'];
+
+    exibirNaTela(a);
+    exibirNaTela(b);
+
+    // _________________________
+    exibirNaTela('======================');
+
+
+
+    //1ª Digitação (aqui) 
+
+
+
+    // _________________________
+    exibirNaTela('======================');
+
+    const unidades = ['Penha', 'Tatuapé', 'Itaquera', 'São Miguel Paulista'];
+    const [penha, tatuape, , smp] = unidades; // pulando Itaquera
+
+    exibirNaTela(penha);
+    exibirNaTela(tatuape);
+    exibirNaTela(smp);
+
+    // _________________________
+    exibirNaTela('======================');
+    // Usando desestruturação com objetos
+
+
+    
+
+     //2ª Digitação (aqui) 
+
+
+
+
+    exibirNaTela('======================');
+
+    // Definindo um Alias (apelido) para nome (pois já tinha sido usado acima)
+    const {nome: aluno, curso} = dados;
+
+    exibirNaTela(aluno);
+    exibirNaTela(curso);
+
+    function exibirNaTela(texto) {
+      // Exibe a mensagem no console do navegador
+      console.log(texto);
+
+      // Exibe a mensagem na tela da página
+      document.getElementById('output').innerHTML += JSON.stringify(texto, null, 2) + '<br>';
+    }
+  </script>
+</body>
+</html>

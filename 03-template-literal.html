@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Exibição de Concatenação</title>
+</head>
+<body>
+  <div id="output"></div>
+
+  <script>
+    const nome = "Max";
+    const sobrenome = "Verstappen";
+    let idade = 26;
+    let cidade = "Cidade de Mônaco";
+    let estado = "Mônaco";
+
+    /* Meu nome é: Max Verstappen, tenho 26 anos e moro atualmente na Cidade de Mônaco - Mônaco. */
+
+
+
+    //1ª Digitação (aqui) 
+
+
+
+    exibirNaTela(mensagem);
+
+    exibirNaTela('==========================');
+
+    // Método template literal/string
+
+
+
+    //2ª Digitação (aqui) 
+
+
+
+    exibirNaTela(mensagem2);
+
+
+    function exibirNaTela(texto) {
+      // Exibe a mensagem no console do navegador
+      console.log(texto);
+
+      // Exibe a mensagem na tela da página
+      document.getElementById('output').innerHTML += texto + '<br>';
+    }
+  </script>
+</body>
+</html>

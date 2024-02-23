@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Herança de Classes</title>
+</head>
+<body>
+  <div id="output"></div>
+
+  <script>
+
+
+
+    //1ª Digitação (aqui) 
+
+
+
+    // Traz tudo da classe mãe (Pessoa) + as particularidades da classe (Aluno)
+    class Aluno extends Pessoa {
+      // Propriedades
+      matricula;
+      curso;
+
+      // Métodos
+      mostraDados() {
+        exibirNaTela(this.matricula);
+        exibirNaTela(this.curso);
+
+        // Métodos da super classe
+        this.mostraNome();
+        this.mostraGenero();
+      }
+    }
+
+    // Criando objetos/ instâncias
+
+
+
+    //2ª Digitação (aqui) 
+
+
+
+
+    // Objeto herdando recursos
+
+
+
+
+     //3ª Digitação (aqui) 
+
+
+
+
+    // Console.log(aluno)
+    aluno.mostraDados();
+
+    
+    function exibirNaTela(texto) {
+      // Exibe a mensagem no console do navegador
+      console.log(texto);
+
+      // Exibe a mensagem na tela da página
+      document.getElementById('output').innerHTML += texto + '<br>';
+    }
+
+    // Usando string JSON 
+    // function exibirNaTela(objeto) {
+    //   // Converte o objeto para uma string JSON formatada
+    //   const jsonString = JSON.stringify(objeto, null, 2);
+
+    //   // Exibe a mensagem no console do navegador
+    //   console.log(jsonString);
+
+    //   // Exibe a mensagem na tela da página
+    //   document.getElementById('output').innerHTML += '<pre>' + jsonString + '</pre><br>';
+    // }
+
+  </script>
+</body>
+</html>

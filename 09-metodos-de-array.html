@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Métodos de Array</title>
+</head>
+<body>
+  <div id="output"></div>
+
+  <script>
+    // 09-metodos-de-array.js
+    /* map (mapeia, transforma em outra coisa)
+    passa sobre elementos de um array e realiza operações neles
+    através de uma função (callback) gerando um novo array. */
+
+    const numeros = [10, 20, 30, 40, 50];
+
+
+
+    //1ª Digitação (aqui) 
+
+
+
+
+    // Outra possibilidade (Chamando função dobra)
+    // const numerosDobrados = numeros.map(dobra);
+
+    // function dobra(valor) {
+    //     return valor * 2;
+    // }
+
+    exibirNaTela(numeros); // original
+    exibirNaTela(numerosDobrados); // transformado/mapeado
+
+    // ________________________________________________
+    exibirNaTela('======================');
+    // Ex. Criar um array e nomes e usar map para transformar em nomes maiusculos
+
+    const nomes = ['ignacio', 'maria', 'jessica', 'tais', 'jaime'];
+
+
+
+    //2ª Digitação (aqui) 
+
+
+
+    exibirNaTela(nomes); // original
+    exibirNaTela(nomesMaiusculo); // transformado/mapeado
+
+    // ___________________________________________________________________________
+    exibirNaTela('======================');
+
+    /* filter (filtra/remove)
+    Retorna um array de valores de acordo com o resultado do filtro aplicado */
+
+    // O JS aceita 10_000 para ficar mais legível
+
+
+
+
+    //3ª Digitação (aqui) 
+
+
+
+
+    exibirNaTela(vendas);
+    exibirNaTela(vendasAcimaDaMeta);
+
+    exibirNaTela('======================');
+
+    const alunos = ['Marcelo', 'Matheus', 'Adriel', 'Palloma', 'Antonio', 'Rafael', 'Rodrigo'];
+
+    const resultados = alunos.filter(aluno => {
+        // o 0 significa na 1ª posição (abaixo método mais antigo e depois atual)
+        // if(aluno.charAt(0) == 'M'){
+            if(aluno.startsWith('M')){
+            return aluno;
+        }
+    });
+
+    // Versão com (arrow function)
+
+
+
+
+    //4ª Digitação (aqui) 
+
+
+
+
+    exibirNaTela(alunos);
+    exibirNaTela('======================');
+    exibirNaTela(resultados);
+    exibirNaTela('======================');
+    exibirNaTela(result);
+
+    // ________________________________________________
+    exibirNaTela('======================');
+
+    const cursos = [
+        {id:1, titulo: 'HTML5 e CSS3', categoria: 'Front-End', preco: 500},
+        {id:2, titulo: 'JS e React', categoria: 'Front-End', preco: 800},
+        {id:3, titulo: 'React Native', categoria: 'Mobile', preco: 1000},
+        {id:4, titulo: 'Photoshop', categoria: 'Design', preco: 400},
+        {id:5, titulo: 'PHP e MySQL', categoria: 'Back-End', preco: 600},
+        {id:6, titulo: 'Flutter', categoria: 'Mobile', preco: 900}
+    ];
+
+    // Trazer só cursos de Front-End
+
+
+
+
+    //5ª Digitação (aqui) 
+
+
+
+
+    exibirNaTela(cursos);
+    exibirNaTela('======================');
+    exibirNaTela(cursosFront);
+
+    // Trazer so parte dos dados (titulo)
+    exibirNaTela('======================');
+
+
+
+
+    //6ª Digitação (aqui) 
+
+
+
+
+    exibirNaTela(titulos);
+
+    exibirNaTela('======================');
+    // Trazer só parte dos dados (titulo da categoria Front-End)
+
+
+
+
+    //7ª Digitação (aqui) 
+
+
+
+
+    exibirNaTela(titulosFront);
+
+    // ___________________________________________________________________________
+    exibirNaTela('==========REDUCE============');
+
+    /* reduce (reduzir a um único valor/resultado) */ 
+
+    const valores = [10, 50, 2000, 5, 25];
+
+    const soma = valores.reduce( (acumulador, valor) => {
+    // o acumulador é o resultado da operação anterior
+        return acumulador + valor
+    // 0 é o valor inicial
+    }, 0);
+
+    exibirNaTela(soma);
+
+    // ____________________________________________
+    exibirNaTela('==========FILTER e REDUCE============');
+
+    // Soma os valores da categoria (Mobile')
+
+
+    
+
+
+    //8ª Digitação (aqui) 
+
+
+
+
+
+    exibirNaTela(somaCursosMobile);
+
+    function exibirNaTela(texto) {
+      // Exibe a mensagem no console do navegador
+      console.log(texto);
+
+      // Exibe a mensagem na tela da página
+      document.getElementById('output').innerHTML += JSON.stringify(texto, null, 2) + '<br>';
+    }
+  </script>
+</body>
+</html>

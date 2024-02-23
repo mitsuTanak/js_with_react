@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Visualização de JavaScript</title>
+</head>
+<body>
+  <div id="output"></div>
+
+  <script>
+  
+  
+    //1ª Digitação (aqui) 
+
+
+    exibirNaTela(meuNome);
+
+    exibirNaTela('==========================');
+
+
+
+    //2ª Digitação (aqui) 
+
+
+
+    exibirNaTela(mensagem);
+
+
+    // Trecho de código para exibir o resultado na tela
+
+    function exibirNaTela(texto) {
+      // Exibe a mensagem no console do navegador
+      console.log(texto);
+
+      // Exibe a mensagem na tela da página
+      document.getElementById('output').innerHTML += texto + '<br>';
+    }
+  </script>
+</body>
+</html>

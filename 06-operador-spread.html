@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Operador Spread</title>
+</head>
+<body>
+  <div id="output"></div>
+
+  <script>
+    // Usando o operador spread (espalhar) que é representado por (...)
+    // Na prática, copiamos o conteúdo de um array (bandas) para dentro de outro (maisBandas)
+
+    // Imutabilidade (não muda)
+
+
+
+    //1ª Digitação (aqui) 
+
+
+
+    exibirNaTela(maisbandas);
+
+    exibirNaTela('======================');
+
+    // Spread com objeto
+
+
+
+    //2ª Digitação (aqui) 
+
+
+
+    function exibirNaTela(texto) {
+      // Exibe a mensagem no console do navegador
+      console.log(texto);
+
+      // Exibe a mensagem na tela da página
+      document.getElementById('output').innerHTML += JSON.stringify(texto, null, 2) + '<br>';
+    }
+  </script>
+</body>
+</html>

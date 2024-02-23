@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Async/Await com Fetch</title>
+</head>
+<body>
+  <div id="output"></div>
+
+  <script>
+    // 10-async-await.js
+    // Trabalhando com a comunicação assíncrona (ajax)
+    // Pegar na internet (Digitar no google: json placeholder)
+    fetch('https://jsonplaceholder.typicode.com/todos/1')
+        .then(resposta => resposta.json() )
+        .then(dados => console.log(dados) )
+        .catch( error => console.log('Erro na operação: '+error.errno) );
+
+    //_____________________________________________________________________
+    console.log('======================');
+
+    /* Sintaxe usando função e async/await */
+    // async function acessaApi(){ // Tradicional
+    const acessaApi = async () => { // Com arrow function
+        try {
+            const resposta = await fetch('https://jsonplaceholder.typicode.com/todos/1');
+            const dados = await resposta.json();
+            console.log(dados);
+        } catch (error){
+            console.log('Deu ruim: ' + error.message);
+        }
+    }
+
+    acessaApi();
+  </script>
+</body>
+</html>

@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Exibição de Funções</title>
+</head>
+<body>
+  <div id="output"></div>
+
+  <script>
+
+
+
+    //1ª Digitação (aqui) 
+
+
+
+    // Chamada da função
+    nomeDaFuncao();
+    outraFuncao();
+
+    exibirNaTela('==========================');
+
+    /* Crie uma função que receba 2 valores numéricos,
+    calcule a diferença entre eles e retorne o resultado
+    para uma variável externa */
+
+
+
+    //2ª Digitação (aqui) 
+
+
+
+    exibirNaTela(resultado);
+
+    /* Arrow Function (função seta/ flecha)
+    Possibilita diversas sintaxes, e até simplificação */
+
+    const exemplo1 = () => {
+      exibirNaTela('Uma arrow function qualquer...');
+    };
+
+    exemplo1();
+
+    const ola = nome => exibirNaTela('Olá ' + nome);
+
+    ola('Ignacio');
+
+    // Versão simplificada (Arrow function com retorno IMPLÍCITO)
+    const metade = valor => valor / 2;
+
+    exibirNaTela(metade(100));
+
+    exibirNaTela('==========================');
+
+    // Parâmetro com valor padrão (fator = 2)
+    const multiplicaValores = (valor, fator = 2) => valor * fator;
+
+    exibirNaTela(multiplicaValores(10, 3));
+    exibirNaTela(multiplicaValores(50));
+    
+    exibirNaTela('==========================');
+
+    /* Exercício 2
+    - Monte uma arrow function que receba um nome de pessoa e a converta para letras maiúsculas.
+    - Chame a função 3x (passando nomes diferentes) e exibindo no console e tela os resultados */
+
+    
+
+    //3ª Digitação (aqui) 
+
+
+
+    function exibirNaTela(texto) {
+      // Exibe a mensagem no console do navegador
+      console.log(texto);
+
+      // Exibe a mensagem na tela da página
+      document.getElementById('output').innerHTML += texto + '<br>';
+    }
+  </script>
+</body>
+</html>

@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Operador Rest e Arrow Functions</title>
+</head>
+<body>
+  <div id="output"></div>
+
+  <script>
+    /* 07-operador-rest
+    Usamos para mesclar uma lista de argumentos/ parâmetros para uma função */
+
+
+
+    //1ª Digitação (aqui) 
+
+
+
+    exibirNaTela( ordenar('Jair', 'Larissa', 'Andrea') );
+
+    exibirNaTela( ordenar('RHCP', 'Mega Death', 'Metallica', 'Rush', 'Pink Floyd') );
+
+    // _________________________
+
+    exibirNaTela('======================');
+
+    const cursos = ['React', 'Angular', 'Vue', 'JS', 'Node.JS','PH','SQL'];
+
+
+
+    //2ª Digitação (aqui) 
+
+
+
+    // _________________________
+
+    exibirNaTela('======================');
+
+    function soma(...valores){
+        let total = 0;
+
+        for(let valor of valores) {
+            total += valor;
+        }
+        return total;
+    }
+
+    // Obs só é possível fazer a função com diferentes qtds de valores por conta do (...) spread na função
+    exibirNaTela( soma(10,20) );
+    exibirNaTela( soma(5, 3, 35, 55, 10,20) );
+
+    // _________________________
+    // Exercício: Transforme as funções acima em arrow function
+
+
+
+    //3ª Digitação (aqui) 
+
+
+
+    // _________________________
+    exibirNaTela('======================');
+
+
+
+    //4ª Digitação (aqui) 
+
+    
+
+    function exibirNaTela(texto) {
+      // Exibe a mensagem no console do navegador
+      console.log(texto);
+
+      // Exibe a mensagem na tela da página
+      document.getElementById('output').innerHTML += JSON.stringify(texto, null, 2) + '<br>';
+    }
+  </script>
+</body>
+</html>
