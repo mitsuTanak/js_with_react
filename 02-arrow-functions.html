@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -12,7 +12,15 @@
 
 
 
-    //1ª Digitação (aqui) 
+    //Função sintaxe Tradicional
+    function nomeDaFuncao() {
+      exibirNaTela('Função de Sintaxe Tradicional...');
+    }
+
+    // Função anonima
+    var outraFuncao = function () {
+      exibirNaTela('Outra forma de declarar função...');
+    }
 
 
 
@@ -28,11 +36,17 @@
 
 
 
-    //2ª Digitação (aqui) 
+    //Calculando
+    function exercicio(valor1, valor2) {
+      return valor1 - valor2;
+      
+    }
 
-
+    let resultado = exercicio(10, 1);
 
     exibirNaTela(resultado);
+
+    exibirNaTela('==========================');
 
     /* Arrow Function (função seta/ flecha)
     Possibilita diversas sintaxes, e até simplificação */
@@ -69,6 +83,22 @@
     
 
     //3ª Digitação (aqui) 
+    const converterMaiuscula = nome => nome.toUpperCase();
+
+    const arr = ['Pedro', 'gabi', 'sOpHiA'];
+
+    for (let i = 0; i < arr.length; i++) {
+      exibirNaTela(converterMaiuscula(arr[i]));
+    }
+
+    // const resultados = alunos.filter(aluno => {
+    //     if(i==3){
+          
+    //     }else{
+    //       exibirNaTela(arr[i].converterMaiuscula)
+    //       return ++i
+    //     }
+    // });
 
 
 

@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -11,7 +11,17 @@
   <script>
   
   
-    //1ª Digitação (aqui) 
+    
+    // Modo antigo:
+    // var meuNome = "Mitsuaki"
+    
+    // Modo Moderno:
+    // let meuNome = "Mitsuaki"
+
+    // Modo sem variação (uma constante)
+    const meuNome = "Mitsuaki"
+
+    // (não é possivel manter uma varivel(var) constante(const) ao mesmo tempo)
 
 
     exibirNaTela(meuNome);
@@ -21,6 +31,16 @@
 
 
     //2ª Digitação (aqui) 
+    let idade = 30; 
+    let mensagem;
+    
+    // Quando tiver '===' é EXATAMENTE igual, ou seja, ele diferencia Maiuscula, minuscula, se é string ou inteiro
+    // Já com '==' é apenas igual, sendo os mesmos charactere tá ok
+    if (idade === 20) {
+      mensagem = 'É maior de idade'
+    }else{
+      mensagem = 'É menor de idade'
+    }
 
 
 
