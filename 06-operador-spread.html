@@ -13,14 +13,14 @@
     // Na prática, copiamos o conteúdo de um array (bandas) para dentro de outro (maisBandas)
 
     // Imutabilidade (não muda)
-
-
-
     //1ª Digitação (aqui) 
 
+    const bandas = ['DaftPunk', 'Gorilas', 'Imagine Dragons', 'Crumberrys']
+    const maisBandas = [...bandas, 'Mother Mother', 'After Dark', 'The Neighbourhood']
 
 
-    exibirNaTela(maisbandas);
+
+    exibirNaTela(maisBandas);
 
     exibirNaTela('======================');
 
@@ -30,7 +30,22 @@
 
     //2ª Digitação (aqui) 
 
+    const dados = {
+      nome: 'Viviane',
+      idade: 21
+    }
 
+    const novosDados = {
+      ...dados,
+      cidade:  'São Paulo',
+      estado: 'São Paulo',
+      idade: 25 //Vai prevalecer a ultima vez declarada
+
+    }
+
+    exibirNaTela(novosDados);
+
+    exibirNaTela('======================');
 
     function exibirNaTela(texto) {
       // Exibe a mensagem no console do navegador
