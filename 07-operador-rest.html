@@ -14,7 +14,9 @@
 
 
 
-    //1ª Digitação (aqui) 
+    function ordenar(...parametros) {
+      return parametros.sort();
+    }
 
 
 
@@ -26,11 +28,12 @@
 
     exibirNaTela('======================');
 
-    const cursos = ['React', 'Angular', 'Vue', 'JS', 'Node.JS','PH','SQL'];
+    const cursos = ['React', 'Angular', 'Vue', 'JS', 'Node.JS','PHP','SQL'];
 
 
 
-    //2ª Digitação (aqui) 
+    exibirNaTela(cursos);
+    exibirNaTela(ordenar(...cursos));
 
 
 
@@ -56,7 +59,7 @@
 
 
 
-    //3ª Digitação (aqui) 
+    
 
 
 
