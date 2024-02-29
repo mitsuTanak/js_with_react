@@ -161,9 +161,10 @@
     
 
 
-    //8ª Digitação (aqui) 
-
-
+    const somaCursosMobile = cursos
+      .filter(cursos => cursos.categoria == 'Mobile')
+      .map(cursos => cursos.preco)
+      .reduce((accumulator, curso) => accumulator + curso, 0);
 
 
 
