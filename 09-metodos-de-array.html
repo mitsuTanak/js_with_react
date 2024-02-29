@@ -164,7 +164,7 @@
     const somaCursosMobile = cursos
       .filter(cursos => cursos.categoria == 'Mobile')
       .map(cursos => cursos.preco)
-      .reduce((accumulator, curso) => accumulator + curso, 0);
+      .reduce((i, curso) => i + curso, 0);
 
 
 
