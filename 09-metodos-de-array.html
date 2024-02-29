@@ -16,11 +16,7 @@
 
     const numeros = [10, 20, 30, 40, 50];
 
-
-
-    //1ª Digitação (aqui) 
-
-
+    const numerosDobrados = numeros.map(numero => numero * 2);
 
 
     // Outra possibilidade (Chamando função dobra)
@@ -39,9 +35,8 @@
 
     const nomes = ['ignacio', 'maria', 'jessica', 'tais', 'jaime'];
 
+    const nomesMaiusculo = nomes.map(nomes => nomes.toLocaleUpperCase())
 
-
-    //2ª Digitação (aqui) 
 
 
 
@@ -56,12 +51,10 @@
 
     // O JS aceita 10_000 para ficar mais legível
 
+    const vendas = [1_500, 2_000, 10_000, 1_000, 500];
+    const meta = 1_000;
 
-
-
-    //3ª Digitação (aqui) 
-
-
+    vendasAcimaDaMeta = vendas.filter(vendas => vendas > meta);
 
 
     exibirNaTela(vendas);
@@ -81,10 +74,8 @@
 
     // Versão com (arrow function)
 
-
-
-
-    //4ª Digitação (aqui) 
+    const result = alunos.filter(aluno => aluno.startsWith('M') ?? aluno);
+ 
 
 
 
@@ -110,9 +101,7 @@
     // Trazer só cursos de Front-End
 
 
-
-
-    //5ª Digitação (aqui) 
+    const cursosFront = cursos.filter(cursos => cursos.categoria == 'Front-End');
 
 
 
@@ -125,9 +114,9 @@
     exibirNaTela('======================');
 
 
+    const titulos = cursos.map(cursos => cursos.titulo)
 
-
-    //6ª Digitação (aqui) 
+     
 
 
 
@@ -140,8 +129,9 @@
 
 
 
-    //7ª Digitação (aqui) 
-
+    const titulosFront = cursos
+      .filter(cursos => cursos.categoria == 'Front-End')
+      .map(cursos => cursos.titulo)
 
 
 

@@ -54,21 +54,34 @@
     exibirNaTela( soma(10,20) );
     exibirNaTela( soma(5, 3, 35, 55, 10,20) );
 
-    // _________________________
-    // Exercício: Transforme as funções acima em arrow function
-
-
-
     
 
+    // _________________________
+    exibirNaTela('======================');
+    // Exercício: Transforme as funções acima em arrow function
 
+    const testeOrdenar = (...parametros) => parametros.sort();    
+
+    exibirNaTela( testeOrdenar('Jair', 'Larissa', 'Andrea') );
+    exibirNaTela( testeOrdenar('RHCP', 'Mega Death', 'Metallica', 'Rush', 'Pink Floyd') );
 
     // _________________________
     exibirNaTela('======================');
 
 
 
-    //4ª Digitação (aqui) 
+    const somaValores = (...valores) => {
+
+      let total = 0;
+
+      for(let valor of valores) {
+            total += valor;
+        }
+        return total;
+    }
+
+    exibirNaTela( soma(10,20) );
+    exibirNaTela( soma(5, 3, 35, 55, 10,20) );
 
     
 

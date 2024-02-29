@@ -23,8 +23,12 @@
 
 
 
-    //1ª Digitação (aqui) 
+    const alunos = ['Maria', 'Lucia', 'Kaio'];
+    const [maria, lucia, kaio] = alunos;
 
+    exibirNaTela(maria);
+    exibirNaTela(lucia);
+    exibirNaTela(kaio);
 
 
     // _________________________
@@ -40,13 +44,19 @@
     // _________________________
     exibirNaTela('======================');
     // Usando desestruturação com objetos
-
-
     
 
-     //2ª Digitação (aqui) 
+    const {nome, cidade} = {nome:'Fulano', idade:18, cidade:'São Paulo'};
 
+    exibirNaTela(nome);
+    exibirNaTela(cidade);
 
+    const dados = {
+
+      nome: 'Victor',
+      curso: 'Analise e Desenvolvimento de Sistemas',
+      nascimento: '08/01/2007'
+    };
 
 
     exibirNaTela('======================');
